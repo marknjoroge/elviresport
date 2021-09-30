@@ -84,7 +84,7 @@ text {
 /* Home Section  */
 /*               */
 
-#home {
+.home {
     /* height: 100vh; */
     width: 95%;
     top: 90;
@@ -145,7 +145,7 @@ text {
 
 .product-card-overlay {
     display: none;
-    position: absolute;
+    /* position: absolute; */
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -312,7 +312,7 @@ i {
     height: 60px;
 }
 
-.contact-form .wide {
+.contact-form .wide ,#subscribe input , #subscribe #submit-subscribe {
     min-width: 510px;
 }
 
@@ -346,9 +346,16 @@ i {
     padding: 40px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
-    font-family: monospace;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (min-width: 250px){
+    
+    #home {
+        width: 600px;
+    }
 }
 
 @media screen and (max-width: 250px) {
