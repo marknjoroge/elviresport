@@ -1,5 +1,6 @@
 body {
     background-color: rgb(39, 37, 50) !important;
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
 }
@@ -34,7 +35,8 @@ text {
 
 #navbar {
     background-color: rgb(39, 37, 50);
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -58,8 +60,8 @@ text {
 
 #navbar a:hover,
 .active {
-    background-color: #ddd;
-    color: black;
+    /* background-color: #ddd; */
+    /* color: black; */
     border-radius: 5px;
 }
 
@@ -72,6 +74,31 @@ text {
     font-size: xx-large;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
+}
+
+.nav-option {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 50px;
+    background-color: #f1f1f17d;
+    width: 150px;
+    background-color: rgb(39, 37, 50);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 0px;
+    margin: 0px;
+}
+
+.with-sub:hover .dropdown-content {
+    display: block;
 }
 
 .top-nav,
@@ -88,7 +115,7 @@ text {
     /* height: 100vh; */
     width: 95%;
     top: 90;
-    padding-top: 300px;
+    padding-top: 100px;
     position: relative;
     justify-content: center;
     align-content: center;
@@ -97,10 +124,9 @@ text {
 
 #video-container {
     display: block;
-    padding: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     height: 100vh;
 }
 
@@ -117,7 +143,7 @@ text {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 
 .product-card {
@@ -179,9 +205,9 @@ i {
     height: 150vh;
     padding: 100px;
     margin: 20px;
-    width: 100%;
+    width: 98%;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -191,8 +217,8 @@ i {
 
 .review-card {
     padding-top: 70px;
-    width: 20%;
-    margin: 25px;
+    width: 250px;
+    margin: 50px;
     float: none;
     display: inline-block;
 }
@@ -206,16 +232,18 @@ i {
 }
 
 .review-itself {
-    padding-top: 20px;
+    height: fit-content;
+    padding-top: 60px;
     font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
     font-weight: 200;
     word-spacing: 3px;
 }
 
 .reviewer {
     font-size: 20px;
-    padding: 20px;
+    padding: 40px;
 }
 
 /*               */
@@ -294,14 +322,13 @@ i {
 }
 
 .contact-form {
-    margin-top: 90px;
+    margin-top: 360px;
     width: 40%;
     float: right;
-    margin: 50px;
 }
 
 #contact input,
-#message, 
+#message,
 #subscribe input {
     border: 0.5px solid white;
     padding: 10px;
@@ -312,7 +339,9 @@ i {
     height: 60px;
 }
 
-.contact-form .wide ,#subscribe input , #subscribe #submit-subscribe {
+.contact-form .wide,
+#subscribe input,
+#subscribe #submit-subscribe {
     min-width: 510px;
 }
 
@@ -321,7 +350,8 @@ i {
     width: calc(100% - (12px * 2));
 }
 
-#contact #submit, #subscribe #submit-subscribe {
+#contact #submit,
+#subscribe #submit-subscribe {
     background-color: white;
     color: rgb(39, 37, 50);
     width: 170px;
@@ -337,7 +367,7 @@ i {
     padding: 50px;
 }
 
-#subscribe span{
+#subscribe span {
     color: white;
     font-size: 25px;
 }
@@ -348,11 +378,10 @@ i {
     color: white;
     font-size: 15px;
     font-weight: 100;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-@media screen and (min-width: 250px){
-    
+@media screen and (min-width: 250px) {
     #home {
         width: 600px;
     }
@@ -365,11 +394,120 @@ i {
     }
 }
 
+@media screen and (max-width: 900px) {
+    #video-container {
+        width: 99.9%;
+    }
+
+    .product-card,
+    .product-card-overlay,
+    .product {
+        width: 200px;
+        height: 175px;
+        overflow: hidden;
+    }
+
+    #about {
+        background-color: rgb(234, 74, 45);
+        height: 100vh;
+        width: 100%;
+    }
+    #about .part1,
+    #about .part2 {
+        height: 50%;
+        position: relative;
+        width: 100%;
+    }
+
+    #about .part2 {
+        height: max-content;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #reviews {
+        height: max-content;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #reviews .review-card {
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #contact .pre-form,
+    #contact .contact-form {
+        text-align: center;
+        margin: 0;
+        margin-top: 0;
+        top: 0;
+        width: 100%;
+        position: relative;
+        padding-top: 40px;
+        height: max-content;
+    }
+
+    #contact input,
+    #message,
+    #subscribe input {
+        width: 80%;
+        margin: 10px;
+        /* position: relative; */
+    }
+
+    .contact-form .wide,
+    #subscribe input,
+    #subscribe #submit-subscribe {
+        min-width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 1290px) {
+    
+    #reviews {
+        height: max-content;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #contact .pre-form,
+    #contact .contact-form {
+        text-align: center;
+        margin: 0;
+        margin-top: 0;
+        top: 0;
+        width: 100%;
+        position: relative;
+        padding-top: 40px;
+        height: max-content;
+    }
+
+    #contact input,
+    #message,
+    #subscribe input {
+        width: 80%;
+        margin: 10px;
+        /* position: relative; */
+    }
+
+    .contact-form .wide,
+    #subscribe input,
+    #subscribe #submit-subscribe {
+        min-width: 80%;
+    }
+}
+
 @media screen and (max-width: 550px) {
     #home .links-div a {
         text-decoration: none;
         color: white;
         padding: 10px;
+        float: none;
+        padding: 0px;
     }
 
     .innernav {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,6 @@
 
     <!-- <link rel="icon" href="./assets/images/logo.png"> -->
 
-    <link rel="stylesheet" href="./assets/index.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,6 +26,8 @@
 
     <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="./assets/index.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Qahiri&family=Questrial&display=swap"
         rel="stylesheet">
     <script src="./js/index.js"></script>
@@ -42,10 +43,15 @@
             <a class="nav-link home-link" href="/"><img src="./assets/images/logo.webp" /></a>
         </div>
         <div class="bottom-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="#shop">Shop</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <div class="nav-option"><a class="nav-link" href="/">Home</a></div>
+            <div class="nav-option with-sub"><a class="nav-link" href="#shop">Shop</a>
+                <div class="dropdown-content">
+                    <a href="#">resistance band</a>
+                    <a href="#">foam-roller set</a>
+                </div>
+            </div>
+            <div class="nav-option"><a class="nav-link" href="#about">About</a></div>
+            <div class="nav-option"><a class="nav-link" href="#contact">Contact</a></div>
         </div>
     </div>
 
@@ -163,11 +169,11 @@
             <div style="padding: 30px;"><a href="mailto:example@mail.com">example@mail.com</a></div>
         </div>
         <div class="contact-form">
-            <input width="50%" style="margin-top: 270px;" name="name" type="text" id="name" placeholder="Name"
+            <input name="name" type="text" id="name" placeholder="Name"
                 required />
-            <input width="50%" name="email" type="email" id="email" placeholder="Email" required />
+            <input name="email" type="email" id="email" placeholder="Email" required />
             <input class="wide" name="subject" type="text" id="subject" placeholder="Subject" />
-            <textarea id="message" class="wide" name="message" cols="50" rows="10"
+            <textarea style="height: 200px;" id="message" class="wide" name="message" cols="500" rows="10" 
                 placeholder="Type your message here..."></textarea>
             <input class="wide" id="submit" type="submit" />
         </div>
@@ -181,6 +187,29 @@
 
     <div id="the-footer">
         ©2020 by Elvire Sport
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
     </div>
 
 </body>
