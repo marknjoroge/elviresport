@@ -2,10 +2,10 @@
 .home {
     /* height: 100vh; */
     color: white;
-    height: fit-content;
+    height: max-content;
     width: 100%;
     top: 90;
-    padding-top: 300px;
+    /* padding-top: 300px; */
     position: relative;
     justify-content: center;
     align-content: center;
@@ -101,4 +101,39 @@
     padding-right: 100px;
 }
 
-.title-text {}
+@media screen and (max-width: 1290px) {
+
+    #home {
+        height: max-content;
+    }
+    .divided-box {
+        padding: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        height: max-content;
+    }
+
+    .nine-grid {
+        height: max-content;
+    }
+
+    .grid-container {
+        width: 100%;
+    }
+
+    .grid-container .product-card, .product-card-overlay {
+        width: 200px;
+        height: 200px;
+    }
+
+    .product-info {
+        width: 100%;
+        height: max-content;
+        padding: 40px;
+    }
+
+    .product-info .buy-button {
+        margin: 0 auto;
+        position: relative;
+    }
+}

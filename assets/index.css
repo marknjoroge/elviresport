@@ -148,6 +148,8 @@ text {
 
 .product-card {
     background-image: url("./images/bodyresistancebands.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 5px;
     /* float: left; */
 
