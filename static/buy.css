@@ -13,10 +13,6 @@
 }
 
 .grid-container {
-    /* padding: 90px; */
-    /* background-color: black; */
-    /* -webkit-margin-start: 200px; */
-    /* margin-left: 200px; */
     width: 60%;
     display: inline-block;
 }
@@ -61,13 +57,9 @@
 .product-info {
     width: 30%;
     display: inline-block;
-    /* text-align: center; */
     height: 100vh;
     padding-bottom: 60px;
     font-weight: 200;
-    /* background-image: url("./images/a058c9_e3f944e2770d43bb889903952a30c136_mv2.webp"); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .product-info .title-text, .price {
@@ -122,8 +114,8 @@
     }
 
     .grid-container .product-card, .product-card-overlay {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 
     .product-info {
